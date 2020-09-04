@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Bunq-Replica</string>
+    <string name="me">Me</string>
+    <string name="us">Us</string>
+    <string name="profile">Profile</string>
+    <string name="camera">Camera</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bunqlogo">bunqLogo</string>
 </resources>
