@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/meFragment">
+
+    <fragment
+        android:id="@+id/meFragment"
+        android:name="com.example.bunq_replica.fragment.MeFragment"
+        android:label="Me"
+        tools:layout="@layout/fragment_me" />
+    <fragment
+        android:id="@+id/usFragment"
+        android:name="com.example.bunq_replica.fragment.UsFragment"
+        android:label="Us"
+        tools:layout="@layout/fragment_us" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.bunq_replica.fragment.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.bunq_replica.fragment.CameraFragment"
+        android:label="Camera"
+        tools:layout="@layout/fragment_camera" />
+</navigation>
