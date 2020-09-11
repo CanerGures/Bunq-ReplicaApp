@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.MeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/me"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ibvInfoBubbles"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <FrameLayout
+            android:id="@+id/circleFirst"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_circle"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/circleCenter"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/co2icon"
+                android:src="@drawable/ic_money" />
+
+            <TextView
+                android:id="@+id/tvFirstValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorBackground"
+                android:text="@string/_0_00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/circleCenter"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:background="@drawable/button_circle"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/co2icon"
+                android:src="@drawable/ic_tree" />
+
+            <TextView
+                android:id="@+id/tvSecondValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorBackground"
+                android:text="@string/_0_trees"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/circleThird"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_circle"
+            app:layout_constraintEnd_toStartOf="@id/circleCenter"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/co2icon"
+                android:src="@drawable/ic_watch" />
+
+            <TextView
+                android:id="@+id/tvThirdValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorBackground"
+                android:text="@string/_0_seconds"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvSecondTitle"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/co2_saved"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryFaded"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleCenter" />
+
+        <TextView
+            android:id="@+id/tvFirstTitle"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/money_saved"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryFaded"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvSecondTitle"
+            app:layout_constraintTop_toBottomOf="@+id/circleFirst" />
+
+        <TextView
+            android:id="@+id/tvThirdTitle"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/money_saved"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryFaded"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/tvSecondTitle"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleThird" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtStart"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/text_round_corner"
+            android:drawablePadding="16dp"
+            android:gravity="center"
+            android:text="@string/start"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:drawableStartCompat="@drawable/ic_favourite"
+            app:layout_constraintBottom_toTopOf="@+id/fabAdd" />
+
+        <ImageButton
+            android:id="@+id/fabAdd"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/bunqbackgrnd"
+            android:clickable="true"
+            android:contentDescription="@string/mainfab"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
