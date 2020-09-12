@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.UsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/us"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ibvInfoBubbles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/circleFirst"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button_circle"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/circleCenter"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivFirstIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/investicon"
+                android:src="@drawable/ic_chart" />
+
+            <TextView
+                android:id="@+id/tvFirstValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorBackground"
+                android:text="@string/_658m"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/circleCenter"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:background="@drawable/button_circle"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivSecondIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/plantedicon"
+                android:src="@drawable/ic_tree" />
+
+            <TextView
+                android:id="@+id/tvSecondValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorBackground"
+                android:text="@string/_1m"
+                android:textColor="@color/colorPrimary"
+                android:textSize="26sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/circleThird"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/button_circle"
+            app:layout_constraintEnd_toStartOf="@id/circleCenter"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivThirdIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/donateicon"
+                android:src="@drawable/ic_favourite_red" />
+
+            <TextView
+                android:id="@+id/tvThirdValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorBackground"
+                android:text="@string/_2k"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvSecondTitle"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/total_planted"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryFaded"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleCenter" />
+
+        <TextView
+            android:id="@+id/tvFirstTitle"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/total_invested"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryFaded"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvSecondTitle"
+            app:layout_constraintTop_toBottomOf="@+id/circleFirst" />
+
+        <TextView
+            android:id="@+id/tvThirdTitle"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/total_donated"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryFaded"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/tvSecondTitle"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleThird" />
+
+        <TextView
+            android:id="@+id/tvUsOverviewExplanationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/latest_community_news"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tvSecondTitle" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/here_s_the_latest_and_greatest_by_all_bunqers_enjoy"
+            android:textColor="@color/colorPrimaryFaded"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvUsOverviewExplanationTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical" />
+
+
+</LinearLayout>

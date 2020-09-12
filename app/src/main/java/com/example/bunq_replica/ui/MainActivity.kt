@@ -3,8 +3,6 @@ package com.example.bunq_replica.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.bunq_replica.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,17 +16,8 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navigationController = findNavController(R.id.fragment)
 
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.meFragment,
-                R.id.usFragment,
-                R.id.profileFragment,
-                R.id.cameraFragment
-            )
-        )
-        setupActionBarWithNavController(navigationController, appBarConfiguration)
-
         bottomNavigationView.setupWithNavController(navigationController)
+
         /*makeCurrentFragment(meFragment)
 
         bnvBottomNavigation.setOnNavigationItemSelectedListener {

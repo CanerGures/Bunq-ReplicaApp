@@ -6,4 +6,24 @@
     <string name="camera">Camera</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="bunqlogo">bunqLogo</string>
+    <string name="mainfab">mainFab</string>
+    <string name="start">Let\'s start with creating an account, it\'s super easy!</string>
+    <string name="co2icon">CO2icon</string>
+    <string name="_0_seconds">0 seconds</string>
+    <string name="_0_trees">0 trees</string>
+    <string name="money_saved">MONEY SAVED</string>
+    <string name="co2_saved">CO2 SAVED</string>
+    <string name="total_planted">TOTAL PLANTED</string>
+    <string name="total_donated">TOTAL DONATED</string>
+    <string name="donateicon">donateIcon</string>
+    <string name="_1m">1M</string>
+    <string name="_658m">€ 658M</string>
+    <string name="total_invested">TOTAL INVESTED</string>
+    <string name="_0_00">€ 0,00</string>
+    <string name="_2k">€ 2K</string>
+    <string name="latest_community_news">Latest community news</string>
+    <string name="here_s_the_latest_and_greatest_by_all_bunqers_enjoy">Here\'s the latest and greatest by all bunqers. Enjoy!</string>
+    <string name="investicon">investIcon</string>
+    <string name="plantedicon">plantedIcon</string>
+    <string name="share">Share</string>
 </resources>
