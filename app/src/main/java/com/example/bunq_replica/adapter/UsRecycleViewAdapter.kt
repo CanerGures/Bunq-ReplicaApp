@@ -55,7 +55,7 @@ class UsRecycleViewAdapter(private val features: List<UsNewsModel>) :
         return ViewHolder(itemView)
     }
 
-    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = features[position]
         holder.parentLayout.setBackgroundColor(Color.parseColor(currentItem.newsBackgroundColor))
@@ -67,51 +67,7 @@ class UsRecycleViewAdapter(private val features: List<UsNewsModel>) :
         holder.vTvClaps.setTextColor(Color.parseColor(currentItem.newsColor))
         holder.vTvShare.setTextColor(Color.parseColor(currentItem.newsColor))
 
-        when (currentItem.newsBackgroundColor) {
-            "1" -> {
-                holder.vTvClaps.setCompoundDrawablesWithIntrinsicBounds(
-                    0,
-                    0,
-                    R.drawable.ic_baseline_thumb_up_alt_24,
-                    0
-                )
-                holder.vTvShare.setCompoundDrawablesWithIntrinsicBounds(
-                    0,
-                    0,
-                    R.drawable.ic_share,
-                    0
-                )
 
-            }
-            "2" -> {
-                holder.vTvClaps.setCompoundDrawablesRelative(
-                    null,
-                    null,
-                    holder.iconThumbOrange,
-                    null
-                )
-                holder.vTvShare.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                    0,
-                    0,
-                    R.drawable.ic_share_orange,
-                    0
-                )
-            }
-            "3" -> {
-                holder.vTvClaps.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                    0,
-                    0,
-                    R.drawable.ic_thumb_red,
-                    0
-                )
-                holder.vTvShare.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                    0,
-                    0,
-                    R.drawable.ic_share_red,
-                    0
-                )
-            }
-        }
 
         Glide.with(holder.itemView.context)
             .load(currentItem.newsUrl)
