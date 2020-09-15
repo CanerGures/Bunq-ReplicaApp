@@ -18,26 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.setupWithNavController(navigationController)
 
-        /*makeCurrentFragment(meFragment)
-
-        bnvBottomNavigation.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.action_me -> makeCurrentFragment(meFragment)
-                R.id.action_us -> makeCurrentFragment(usFragment)
-                R.id.action_profile -> makeCurrentFragment(profileFragment)
-                R.id.action_camera -> makeCurrentFragment(cameraFragment)
-
-            }
-            true
-        }*/
-
 
     }
 
-    /*private fun makeCurrentFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_main, fragment)
-            commit()
-        }
-    }*/
 }
