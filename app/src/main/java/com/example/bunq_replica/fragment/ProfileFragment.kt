@@ -14,12 +14,12 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootview = inflater.inflate(R.layout.fragment_profile, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_profile, container, false)
 
 
 
 
-        return rootview
+        return rootView
     }
 
 

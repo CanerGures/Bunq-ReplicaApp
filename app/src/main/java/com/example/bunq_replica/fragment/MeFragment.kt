@@ -14,15 +14,15 @@ class MeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootview = inflater.inflate(R.layout.fragment_me, container, false)
-        val imgBtnAdd = rootview.findViewById<ImageButton>(R.id.fabAdd)
+        val rootView = inflater.inflate(R.layout.fragment_me, container, false)
+        val imgBtnAdd = rootView.findViewById<ImageButton>(R.id.fabAdd)
 
 
         imgBtnAdd.setOnClickListener {
 
         }
 
-        return rootview
+        return rootView
 
 
     }
