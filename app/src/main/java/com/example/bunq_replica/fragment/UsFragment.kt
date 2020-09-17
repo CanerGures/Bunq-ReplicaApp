@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,7 +21,15 @@ class UsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_us, container, false)
+        val imgBtnAdd = rootView.findViewById<ImageButton>(R.id.fabAddUs)
 
+        val bounceAnim: Animation =
+            AnimationUtils.loadAnimation(rootView.context, R.anim.shake_animation)
+        imgBtnAdd.startAnimation(bounceAnim)
+
+        imgBtnAdd.setOnClickListener {
+
+        }
 
         val list = createMockData()
         recyclerView = rootView.findViewById(R.id.usRecyclerView)
