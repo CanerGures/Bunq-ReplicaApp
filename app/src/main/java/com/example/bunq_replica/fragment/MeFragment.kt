@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import com.example.bunq_replica.R
@@ -15,8 +17,11 @@ class MeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_me, container, false)
-        val imgBtnAdd = rootView.findViewById<ImageButton>(R.id.fabAdd)
+        val imgBtnAdd = rootView.findViewById<ImageButton>(R.id.fabAddMe)
 
+        val bounceAnim: Animation =
+            AnimationUtils.loadAnimation(rootView.context, R.anim.shake_animation)
+        imgBtnAdd.startAnimation(bounceAnim)
 
         imgBtnAdd.setOnClickListener {
 
