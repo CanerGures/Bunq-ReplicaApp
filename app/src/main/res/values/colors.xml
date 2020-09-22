@@ -6,4 +6,6 @@
     <color name="colorAccent">#FA32DA</color>
     <color name="colorBackground">#19191B</color>
     <color name="colorTransparent">#00000000</color>
+    <color name="colorBlue">#FF0080FF</color>
+    <color name="colorFragmentText">#FF999999</color>
 </resources>
