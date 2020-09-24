@@ -23,9 +23,7 @@ class MeFragment : Fragment() {
             AnimationUtils.loadAnimation(rootView.context, R.anim.shake_animation)
         imgBtnAdd.startAnimation(bounceAnim)
 
-        imgBtnAdd.setOnClickListener {
 
-        }
 
         return rootView
 
